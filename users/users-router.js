@@ -4,7 +4,7 @@ const router = express.Router()
 const users = require('./users-model')
 const restricted = require('../auth/restricted')
 
-router.get('/',   (req, res) => {
+router.get('/', restricted,  (req, res) => {
     users.find().then(users => {
         res.status(200).json(users)
     }).catch(err => {

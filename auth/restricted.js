@@ -12,6 +12,7 @@ module.exports = (req, res, next) => {
           department: decodeToken.department,
           username: decodeToken.username
         };
+        next()
       }
     });
   } else {
