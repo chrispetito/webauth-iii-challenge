@@ -11,7 +11,8 @@ module.exports = {
       afterCreate: (conn, done) => {
         conn.run('PRAGMA foreign_keys = ON', done)
       }
-    }
+    }, 
+    useNullAsDefault: true
   },
 
   staging: {
