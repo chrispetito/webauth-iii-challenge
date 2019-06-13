@@ -14,18 +14,21 @@ export default class SignUp extends React.Component {
         <h1>Sign Up</h1>
         <form className="inputs" onSubmit={this.signup}>
           <input
+            required
             placeholder="username"
             name="username"
             value={this.state.username}
             onChange={this.handleChange}
           />
           <input
+            required
             placeholder="password"
             name="password"
             value={this.state.password}
             onChange={this.handleChange}
           />
           <input
+            required
             placeholder="department"
             name="department"
             value={this.state.department}
