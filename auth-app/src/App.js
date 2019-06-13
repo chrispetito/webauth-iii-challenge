@@ -5,11 +5,13 @@ import "./App.css";
 import Login from "./components/Login";
 import UserList from "./components/UserList";
 import SignUp from './components/SignUp'
+import NavBar from "./components/NavBar";
 
 class App extends React.Component {
   render() {
   return (
     <div className="App">
+    <NavBar />
       <header>
         <nav>
           <NavLink to="/login">Login</NavLink>

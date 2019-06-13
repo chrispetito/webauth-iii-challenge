@@ -31,3 +31,11 @@
     transform: rotate(360deg);
   }
 }
+.navbar {
+  width: 100%;
+  border: 1px solid red;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
