@@ -3,19 +3,21 @@ import axios from 'axios'
 
 export default class SignUp extends React.Component {
     state = {
-        credentials: {
-            username: '',
-            password: '',
-            department: ''
-        }
+        username: '',
+        password: '',
+        department: ''
     }
     render() {
+        console.log(this.state)
         return(
+
             <div>
+                <h1>Sign Up</h1>
                 <form onSubmit={this.signup}>
-                    <input placeholder='username' name='username' value={this.state.credentials.username} onChange={this.handleChange}></input>
-                    <input placeholder='password' name='password' value={this.state.credentials.password} onChange={this.handleChange}></input>
-                    <input placeholder='department' name='department' value={this.state.credentials.department} onChange={this.handleChange}></input>
+                    <input placeholder='username' name='username' value={this.state.username} onChange={this.handleChange}></input>
+                    <input placeholder='password' name='password' value={this.state.password} onChange={this.handleChange}></input>
+                    <input placeholder='department' name='department' value={this.state.department} onChange={this.handleChange}></input>
+                    <button>Sign Up</button>
                 </form>
             </div>
         )

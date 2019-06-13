@@ -27,7 +27,7 @@ class UserList extends React.Component {
       .get(endpoint)
       .then(res => {
         console.log(res.data);
-        this.setState(() => ({ users: res.data }));
+        this.setState({users: res.data});
       })
       .catch(err => {
         console.error(err);
