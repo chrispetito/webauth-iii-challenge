@@ -9,9 +9,9 @@ export default class Login extends React.Component {
 
     render() {
         return(
-            <div>
+            <div className='form'>
                 <h1>Login</h1>
-                <form onSubmit={this.login}>
+                <form className='inputs' onSubmit={this.login}>
                     <input placeholder='username' name='username' value={this.state.username} onChange={this.handleChange}></input>
                     <input placeholder='password' name='password' value={this.state.password} onChange={this.handleChange}></input>
                     <button>Login</button>
