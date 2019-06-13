@@ -8,7 +8,7 @@ export default class SignUp extends React.Component {
         department: ''
     }
     render() {
-        console.log(this.state)
+        // console.log(this.state)
         return(
 
             <div className='form'>
@@ -34,7 +34,7 @@ export default class SignUp extends React.Component {
         event.preventDefault()
         const endpoint = `http://localhost:4000/api/auth/register`
         axios.post(endpoint, this.state).then(res => {
-            console.log(res.data)
+            // console.log(res.data)
             localStorage.setItem('jwt', res.data.token)
             this.props.history.push('/users')
         })
