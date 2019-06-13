@@ -5,9 +5,9 @@ const token = localStorage.getItem('jwt')
 export default function(Component) {
     return class Authenticated extends React.Component {
         render() {
-            const notLoggedIn = <h1>Please log in to view users</h1>
+            const notLoggedIn = <div>Please log in to view users</div>
 
-            return <>{token ? <Component {...this.props} /> : notLoggedIn}</>
+            return <>{token ? <Component {...this.props} /> : notLoggedIn}</>;
         }
     }
 }

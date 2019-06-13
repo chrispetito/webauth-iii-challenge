@@ -4,6 +4,7 @@ import "./App.css";
 
 import Login from "./components/Login";
 import UserList from "./components/UserList";
+import SignUp from './components/SignUp'
 
 class App extends React.Component {
   render() {
@@ -13,11 +14,13 @@ class App extends React.Component {
         <nav>
           <NavLink to="/login">Login</NavLink>
           <NavLink to="/users">Users</NavLink>
+          <NavLink to='/signup'>Sign Up</NavLink>
           <button onClick={this.logout}>Log Out</button>
         </nav>
       </header>
       <Route path='/login' component={Login}></Route>
       <Route path='/users' component={UserList}></Route>
+      <Route path= '/signup' component={SignUp}></Route>
     </div>
   );
   }
