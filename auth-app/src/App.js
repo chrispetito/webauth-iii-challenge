@@ -12,13 +12,14 @@ class App extends React.Component {
   return (
     <div className="App">
     <NavBar />
-      <header>
+      <header className='subnav'>
         <nav>
-          <NavLink to="/login">Login</NavLink>
-          <NavLink to="/users">Users</NavLink>
-          <NavLink to='/signup'>Sign Up</NavLink>
-          <button onClick={this.logout}>Log Out</button>
-        </nav>
+          <NavLink className = 'navlink' to="/login">Login</NavLink>
+          <NavLink className = 'navlink' to="/users">Users</NavLink>
+          <NavLink className = 'navlink' to='/signup'>Sign Up</NavLink>
+          </nav>
+          <button className='navbutton' onClick={this.logout}>Log Out</button>
+
       </header>
       <Route path='/login' component={Login}></Route>
       <Route path='/users' component={UserList}></Route>
