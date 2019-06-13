@@ -32,5 +32,12 @@ export default class Login extends React.Component {
     login = event => {
         event.preventDefault()
         const endpoint = `http://localhost:4000/api/auth/login`
+        axios.post(endpoint, this.state).then(res => {
+            localStorage.setItem('jwt', res.data.token)
+            this.props.history.push('/users')
+        })
+        .catch(err => {
+            console.error(err)
+        })
     }
 }
